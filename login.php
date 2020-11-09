@@ -22,7 +22,7 @@
             <nav class="navigation">
                 <ul class="show">
                     <li><a href="index.php">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="#">Deporte</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
                     <li><a href="login.php">Profesores</a></li>
@@ -98,7 +98,7 @@
                                             echo "<script>
                                                 alert('Ha iniciado seción como Profesor');
                                             </script>";
-                                            //Aqui se debe abrir la interfaz del profesor
+                                            header('location: profesor.php?varUser='.$user);
                                         } else{
                                             echo "<script>
                                                 alert('Ha iniciado seción como Administrativo');

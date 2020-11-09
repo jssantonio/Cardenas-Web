@@ -6,9 +6,11 @@
     <link rel="icon" href="imagenes/dragon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilobanner.css">
     <script src="https://kit.fontawesome.com/0458944bda.js" crossorigin="anonymous"></script>
     <title>Dragones Cárdenas</title>
 </head>
+
 <body>
     <header class="header">
         <div class="container logo-nav-container">
@@ -18,7 +20,7 @@
             <nav class="navigation">
                 <ul class="show">
                     <li><a href="index.php">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="#">Deporte</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
                     <li><a href="login.php">Profesores</a></li>
@@ -27,26 +29,37 @@
         </div>
     </header>
     <main class="main">
-        <div class="container">
-            <h1>INFORMACIÓN</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit dolorum alias, blanditiis temporibus, rerum in labore excepturi quaerat culpa molestiae repudiandae debitis praesentium et corrupti at officiis voluptatibus ullam reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit dolorum alias, blanditiis temporibus, rerum in labore excepturi quaerat culpa molestiae repudiandae debitis praesentium et corrupti at officiis voluptatibus ullam reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit dolorum alias, blanditiis temporibus, rerum in labore excepturi quaerat culpa molestiae repudiandae debitis praesentium et corrupti at officiis voluptatibus ullam reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit dolorum alias, blanditiis temporibus, rerum in labore excepturi quaerat culpa molestiae repudiandae debitis praesentium et corrupti at officiis voluptatibus ullam reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit dolorum alias, blanditiis temporibus, rerum in labore excepturi quaerat culpa molestiae repudiandae debitis praesentium et corrupti at officiis voluptatibus ullam reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit dolorum alias, blanditiis temporibus, rerum in labore excepturi quaerat culpa molestiae repudiandae debitis praesentium et corrupti at officiis voluptatibus ullam reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit dolorum alias, blanditiis temporibus, rerum in labore excepturi quaerat culpa molestiae repudiandae debitis praesentium et corrupti at officiis voluptatibus ullam reiciendis.</p>
-        </div>
+        <section id="banner">
+            <img src="imagenes/imagenbanner.jpg">
+            <div class="contenedor">
+                <h2>DRAGONES CARDENAS</h2>
+                <p>Las artes marciales son un arte porque representa un estilo estético definido y marcial<br><br>¡Aprende las mejores técnicas y métodos creados para la defensa y lucha en combate!</p>
+                <a href="#">Leer más</a>
+            </div>
+        </section>
+
+        <section id="bienvenidos">
+            <div class="contenedor">
+                <h2>BIENVENIDOS A NUESTRO CLUB</h2>
+                <p>El deporte es para todas las edades.<br>Si te gustan los deportes de combate recuerda siempre acercarte a entrenar con profesionales.<br>Ven a tomar tu clase de cortesia, conoce el sistema de Artes Marciales Mixtas</p>
+            </div>
+        </section>
+
+        <section id="bannerdos">
+            <img src="imagenes/perteneces.png">
+            <div class="contenedor">
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="contanier-img">
-          <img class="contanier_img" src="imagenes/codeme.jpg" alt="contanier_img">
-          <img class="contanier_img"src="imagenes/conade.png" alt="contanier_img">
-          <img class="contanier_img"src="imagenes/wbc.png" alt="contanier_img">
-          <img class="contanier_img"src="imagenes/whusu.jpg" alt="contanier_img">
-          <p align=center href="#" class="bob"> <b> © Dragones Cárdenas® Todos los Derechos Reservados. </p>
-          <p align=center href="#" class="bobi"> Términos y Condiciones </p>
-          <p align=center href="#" class="bobs"> Política de Privacidad </p> </b>
+            <img class="contanier_img" src="imagenes/codeme.jpg" alt="contanier_img">
+            <img class="contanier_img" src="imagenes/conade.png" alt="contanier_img">
+            <img class="contanier_img" src="imagenes/wbc.png" alt="contanier_img">
+            <img class="contanier_img" src="imagenes/whusu.jpg" alt="contanier_img">
+            <p align=center href="#" class="bob"> <b> © Dragones Cárdenas® Todos los Derechos Reservados. </p>
+            <p align=center href="#" class="bobi"> Términos y Condiciones </p>
+            <p align=center href="#" class="bobs"> Política de Privacidad </p> </b>
         </div>
     </footer>
     <!-- <script src="../js/jquery-3.5.0.min.js"></script> -->
@@ -61,4 +74,5 @@
             <img src="icon/icon-face.png" alt="" title="Visata nuestra página de Facebook">
         </a>
 </body>
+
 </html>

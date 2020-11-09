@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2020 a las 04:51:21
+-- Tiempo de generación: 09-11-2020 a las 18:47:41
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
 
@@ -95,6 +95,13 @@ CREATE TABLE `gym` (
   `adress` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `gym`
+--
+
+INSERT INTO `gym` (`gym_code`, `gym_name`, `adress`) VALUES
+(1, 'Corps Gimnasio', 'Popolna 81, Pedregal de San Nicolás, Tlalpan, 14100, Ciudad de México');
+
 -- --------------------------------------------------------
 
 --
@@ -111,6 +118,13 @@ CREATE TABLE `instructor` (
   `belt_id1` int(11) DEFAULT NULL,
   `gym_code1` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `instructor`
+--
+
+INSERT INTO `instructor` (`reg_code`, `first_name`, `last_name`, `birthdate`, `phone_num`, `email`, `belt_id1`, `gym_code1`) VALUES
+('JCM-040819', 'Juan Carlos', 'Noguez Hernández', '1980-08-14', '5540493682', 'JuanCN@gmail.com', 10, 1);
 
 -- --------------------------------------------------------
 
@@ -151,6 +165,13 @@ CREATE TABLE `manager` (
   `occupation` varchar(30) DEFAULT NULL,
   `belt_id3` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `manager`
+--
+
+INSERT INTO `manager` (`reg_code`, `first_name`, `last_name`, `birthdate`, `phone_num`, `email`, `occupation`, `belt_id3`) VALUES
+('JIC-678302', 'Juan Ivan', 'Cárdenas G.', '1988-07-23', '5566778899', 'example2@gmail.com', 'Director Técnico', 15);
 
 -- --------------------------------------------------------
 
@@ -289,7 +310,7 @@ ALTER TABLE `fight`
 -- AUTO_INCREMENT de la tabla `gym`
 --
 ALTER TABLE `gym`
-  MODIFY `gym_code` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `gym_code` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `news`

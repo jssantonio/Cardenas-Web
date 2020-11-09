@@ -14,9 +14,9 @@
             <span class="menu-icon">Ver menú</span>
             <nav class="navigation">
                 <ul class="show">
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="#">Confimaciones</a></li>
+                    <li><a href="index.php">Noticias</a></li>
+                    <li><a href="#">Alumnos</a></li>
+                    <li><a href="#">Torneos</a></li>
                     <li><a href="#">Seguridad</a></li>
                 </ul>
             </nav>
@@ -26,12 +26,11 @@
     <main class="main">
         <?php
             $usuario=$_GET["varUser"];
-            // $pruebausuario = "JIC-678302";
             $mysqli = new mysqli("localhost", 'root', '','CardenasDB');
             if($mysqli->connect_errno){
                 echo "Fallo al conectar a MySQL: (".$mysqli->connect_errno.")".$mysqli->connect_error;
             }
-            $sqlNombre = "SELECT first_name FROM manager WHERE reg_code = '".$usuario."'";
+            $sqlNombre = "SELECT first_name FROM instructor WHERE reg_code = '".$usuario."'";
             $resultado = $mysqli->query($sqlNombre);
             if($resultado->num_rows >0){
                 while($row = $resultado->fetch_assoc()){
@@ -41,7 +40,7 @@
             }
             else{ echo '<h1>Falló</h1>';}
 
-            $sqlNacimiento = "SELECT birthdate FROM manager WHERE reg_code = '".$usuario."'";
+            $sqlNacimiento = "SELECT birthdate FROM instructor WHERE reg_code = '".$usuario."'";
             $resultado = $mysqli->query($sqlNacimiento);
             if($resultado->num_rows >0){
                 while($row = $resultado->fetch_assoc()){
@@ -50,7 +49,7 @@
             }
             else{ echo '<h1>Falló</h1>';}
 
-            $sqlNumero = "SELECT phone_num FROM manager WHERE reg_code = '".$usuario."'";
+            $sqlNumero = "SELECT phone_num FROM instructor WHERE reg_code = '".$usuario."'";
             $resultado = $mysqli->query($sqlNumero);
             if($resultado->num_rows >0){
                 while($row = $resultado->fetch_assoc()){
@@ -58,7 +57,7 @@
                 }
             }
             else{ echo '<h1>Falló</h1>';}
-            $sqlCorreo = "SELECT email FROM manager WHERE reg_code = '".$usuario."'";
+            $sqlCorreo = "SELECT email FROM instructor WHERE reg_code = '".$usuario."'";
             $resultado = $mysqli->query($sqlCorreo);
             if($resultado->num_rows >0){
                 while($row = $resultado->fetch_assoc()){
@@ -67,16 +66,7 @@
             }
             else{ echo '<h1>Falló</h1>';}
 
-            $sqlPuesto = "SELECT occupation FROM manager WHERE reg_code = '".$usuario."'";
-            $resultado = $mysqli->query($sqlPuesto);
-            if($resultado->num_rows >0){
-                while($row = $resultado->fetch_assoc()){
-                    $Puesto = $row['occupation'];
-                }
-            }
-            else{ echo '<h1>Falló</h1>';}
-
-            $sqlGrado = "SELECT color FROM manager INNER JOIN belt on manager.belt_id3 = belt.belt_id WHERE reg_code = '".$usuario."'";
+            $sqlGrado = "SELECT color FROM instructor INNER JOIN belt on instructor.belt_id1 = belt.belt_id WHERE reg_code = '".$usuario."'";
             $resultado = $mysqli->query($sqlGrado);
             if($resultado->num_rows >0){
                 while($row = $resultado->fetch_assoc()){
@@ -84,8 +74,17 @@
                 }
             }
             else{ echo '<h1>Falló</h1>';}
+
+            $sqlGrado = "SELECT gym_name FROM instructor INNER JOIN gym on instructor.gym_code1 = gym.gym_code WHERE reg_code = '".$usuario."'";
+            $resultado = $mysqli->query($sqlGrado);
+            if($resultado->num_rows >0){
+                while($row = $resultado->fetch_assoc()){
+                    $gym = $row['gym_name'];
+                }
+            }
+            else{ echo '<h1>Falló</h1>';}
             
-            echo '<div> <p>Puesto: '.$Puesto.'</p>
+            echo '<div> <p>Gimnasio: '.$gym.'</p>
                         <p>Cinta: '.$Grado.'</p>
                         <p>Fecha de nacimiento: '.$Nacimiento.'</p>
                         <p>Correo electrónico: '.$Correo.'</p>

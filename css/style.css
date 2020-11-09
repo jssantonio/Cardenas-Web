@@ -45,8 +45,8 @@ p {
 }
 
 .logo {
-  letter-spacing: 15px;
-  font-size: 1.3em;
+  width: 230px;
+  height: 100px;
 }
 
 .menu-icon {

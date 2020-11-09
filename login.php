@@ -16,7 +16,8 @@
 <body>
     <header class="header">
         <div class="container logo-nav-container">
-            <a href="#" class="logo"> DRAGONES <br> CÁRDENAS </br></a>
+            <!-- <a href="#" class="logo"> DRAGONES <br> CÁRDENAS </br></a> -->
+            <img src="imagenes/logo-blanco.png" alt="logo" class="logo">
             <span class="menu-icon">Ver menú</span>
             <nav class="navigation">
                 <ul class="show">
@@ -102,7 +103,7 @@
                                             echo "<script>
                                                 alert('Ha iniciado seción como Administrativo');
                                             </script>";
-                                            //aqui se debe abrir la interfaz del administrativo
+                                            header('location: administrativo.php?varUser='.$user);
                                         }
                                     }
                                 }

@@ -18,7 +18,8 @@
 <body>
     <header class="header">
         <div class="container logo-nav-container">
-            <a href="#" class="logo"> DRAGONES <br> CÁRDENAS </br></a>
+            <!-- <a href="#" class="logo"> DRAGONES <br> CÁRDENAS </br></a> -->
+            <img src="imagenes/logo-blanco.png" alt="logo" class="logo">
             <span class="menu-icon">Ver menú</span>
             <nav class="navigation">
                 <ul class="show">

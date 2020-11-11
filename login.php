@@ -50,6 +50,7 @@
                <input type="submit" value="Ingresar" class="button">
                <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
                <p>¿No tienes una cuenta? <a class="link" href="registro.php"> <b> Registrate </b> </a></p>
+               <p> <a class="link" href="contraseña.php"> ¿Olvidaste tu contraseña? </a></p>
            </div>
           </form>
           <?php
